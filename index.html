@@ -1,0 +1,40 @@
+﻿<!-- index page for character selection -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Character Selection</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <h1 class="sr-only">Character Selection</h1>
+    <div class="char-container">
+      <div class="logo">
+        <img src="images/LOGO.png" alt="Site logo">
+      </div>
+
+      <img src="images/characters.png" alt="Character selection artwork showing all roles">
+      <div class="hotspot-strip">
+        <a class="hotspot hotspot-1" href="role1.html" title="Role 1"></a>
+        <a class="hotspot hotspot-2" href="role2.html" title="Role 2"></a>
+        <a class="hotspot hotspot-3" href="role3.html" title="Role 3"></a>
+        <a class="hotspot hotspot-4" href="role4.html" title="Role 4"></a>
+        <a class="hotspot hotspot-5" href="role5.html" title="Role 5"></a>
+      </div>
+
+      <div class="info-bar">
+        <p class="info-main">Character information portal</p>
+        <p class="info-sub">Tap a character to view their profile</p>
+      </div>
+    </div>
+  </main>
+
+  <div class="loading-overlay" aria-hidden="true">
+    <div class="spinner" role="presentation"></div>
+    <span class="loading-text">Loading...</span>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
