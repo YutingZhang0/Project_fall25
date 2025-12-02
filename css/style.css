@@ -80,14 +80,17 @@ body {
 
 .info-main {
   margin: 0;
-  font-size: 18px;
+  font-size: 24px;
+  letter-spacing: 0.02em;
 }
 
 .info-sub {
   margin: 4px 0 0;
-  font-size: 14px;
-  font-weight: 400;
-  opacity: 0.9;
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0.92;
+  animation: portal-pulse 1.8s ease-in-out infinite;
+  transform-origin: center;
 }
 
 .loading-overlay {
@@ -128,5 +131,24 @@ body.is-loading .loading-overlay {
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes portal-pulse {
+  0% {
+    opacity: 0;
+    transform: translateY(2px) scale(0.98);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  65% {
+    opacity: 0.45;
+    transform: translateY(-1px) scale(1.02);
+  }
+  100% {
+    opacity: 0.9;
+    transform: translateY(0) scale(1);
   }
 }

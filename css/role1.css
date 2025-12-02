@@ -1,5 +1,7 @@
 ﻿:root {
   --footer-h: 72px;
+  --chibi-mobile-gap: 0px;
+  --chibi-w: 280px;
 }
 
 body {
@@ -398,11 +400,15 @@ body {
 }
 
 @media (max-width: 900px) {
+  :root {
+    --chibi-mobile-gap: 280px;
+  }
+
   .page {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     gap: 24px;
-    padding: 32px 20px 140px;
+    padding: 32px 20px calc(50px + var(--chibi-mobile-gap));
   }
 
   .card,
@@ -444,6 +450,26 @@ body {
   .chibi-trigger {
     right: 16px;
     bottom: calc(12px + var(--footer-h));
+  }
+
+  .chibi-dialog {
+    --dialog-w: clamp(60px, calc(100vw - var(--chibi-w) - 44px), 320px);
+    width: var(--dialog-w);
+    max-width: none;
+    left: max(16px, calc(100vw - 16px - var(--chibi-w) - 12px - var(--dialog-w)));
+    right: auto;
+    bottom: calc(100% + 12px);
+    transform: none;
+    text-align: left;
+  }
+
+  .chibi-dialog::after {
+    top: 50%;
+    right: -12px;
+    bottom: auto;
+    transform: translateY(-50%);
+    border-width: 10px 0 10px 12px;
+    border-color: transparent transparent transparent rgba(10, 12, 20, 0.9);
   }
 }
 
