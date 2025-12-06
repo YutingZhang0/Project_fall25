@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Character Selection</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,7 +15,10 @@
         <img src="images/LOGO.png" alt="Site logo">
       </div>
 
-      <img src="images/characters.png" alt="Character selection artwork showing all roles">
+      <picture class="bg-art">
+        <source media="(max-width: 900px)" srcset="images/characters_m.png">
+        <img src="images/characters.png" alt="Character selection artwork showing all roles">
+      </picture>
       <div class="hotspot-strip">
         <a class="hotspot hotspot-1" href="role1.html" title="Sun Ce"></a>
         <a class="hotspot hotspot-2" href="role2.html" title="Yuan Ji"></a>
